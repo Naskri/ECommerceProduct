@@ -1,3 +1,23 @@
+:root {
+  --color-primary: hsl(26, 100%, 55%);
+  --color-secondary: hsl(25, 100%, 94%);
+
+  --color-neutral: hsl(0, 0%, 100%);
+  --color-heading: hsl(220, 13%, 13%);
+  --color-text: hsl(219, 9%, 45%);
+  --color-previous-price: hsl(220, 14%, 75%);
+  --color-action-background: hsl(223, 64%, 98%);
+  --color-modal: hsla(0, 0%, 0%, 0.75);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  background-color: red;
+  font-family: "Kumbh Sans", sans-serif;
 }
