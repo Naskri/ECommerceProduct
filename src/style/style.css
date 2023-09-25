@@ -85,6 +85,7 @@ body {
 }
 
 .gallery {
+  place-self: center;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -313,6 +314,15 @@ body {
   .mobile .button__hamburger--close {
     display: block;
   }
+
+  .product {
+    padding: 2rem 0;
+    grid-template-columns: 1fr;
+  }
+
+  .wrapper--small {
+    max-width: 35rem;
+  }
 }
 
 @media (max-width: 28rem) {
@@ -328,5 +338,42 @@ body {
 
   .navigation__link::after {
     display: none;
+  }
+  .gallery__images {
+    display: none;
+  }
+  .content {
+    padding-top: 0;
+  }
+  .wrapper {
+    padding: 0;
+  }
+
+  .navigation {
+    padding: 1rem;
+  }
+
+  .product {
+    padding: 0;
+  }
+
+  .product__content {
+    padding: 0 1rem 3rem;
+  }
+
+  .button--gallery,
+  .gallery__image-container {
+    border-radius: 0;
+  }
+
+  .price {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .content__actions {
+    flex-direction: column;
+    align-items: stretch;
   }
 }
