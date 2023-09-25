@@ -13,7 +13,91 @@
     />
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <div class="wrapper">
+        <nav class="navigation">
+          <div class="navigation__routing">
+            <a href="#" class="link logo">
+              <img
+                src="./src/images/logo.svg"
+                alt="Sneakers"
+                class="logo__image"
+              />
+            </a>
+            <button
+              data-hamburger
+              class="button button--hamburger"
+              aria-label="Hamburger menu"
+              aria-controls="nav"
+              aria-expanded="false"
+            >
+              <img
+                src="./src/images/icon-menu.svg"
+                alt="Hamburger"
+                class="button__hamburger-image button__hamburger--open"
+              />
+              <img
+                src="./src/images/icon-close.svg"
+                alt="Close Hamburger"
+                class="button__hamburger-image button__hamburger--close"
+              />
+            </button>
+            <ul class="navigation__list">
+              <li class="navigation__item">
+                <a href="#" class="link navigation__link"> Collections </a>
+              </li>
+              <li class="navigation__item">
+                <a href="#" class="link navigation__link"> Men </a>
+              </li>
+              <li class="navigation__item">
+                <a href="#" class="link navigation__link"> Women </a>
+              </li>
+              <li class="navigation__item">
+                <a href="#" class="link navigation__link"> About </a>
+              </li>
+              <li class="navigation__item">
+                <a href="#" class="link navigation__link"> Contact </a>
+              </li>
+            </ul>
+          </div>
+          <div class="navigation__action">
+            <button class="button button--cart" aria-label="Cart">
+              <img
+                src="./src/images/icon-cart.svg"
+                alt=""
+                class="button__image"
+              />
+            </button>
+            <button class="button button--avatar">
+              <img
+                src="./src/images/image-avatar.png"
+                alt="Kamil Naskret face shot"
+                class="button__avatar-image"
+              />
+            </button>
+          </div>
+        </nav>
+        <nav class="navigation--mobile">
+          <ul class="navigation__list navigation__mobile" id="nav">
+            <li class="navigation__item">
+              <a href="#" class="link navigation__link"> Collections </a>
+            </li>
+            <li class="navigation__item">
+              <a href="#" class="link navigation__link"> Men </a>
+            </li>
+            <li class="navigation__item">
+              <a href="#" class="link navigation__link"> Women </a>
+            </li>
+            <li class="navigation__item">
+              <a href="#" class="link navigation__link"> About </a>
+            </li>
+            <li class="navigation__item">
+              <a href="#" class="link navigation__link"> Contact </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
