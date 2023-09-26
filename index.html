@@ -11,6 +11,8 @@
       href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <script src="https://unpkg.com/tabbable/dist/index.umd.js"></script>
+    <script src="https://unpkg.com/focus-trap/dist/focus-trap.umd.js"></script>
   </head>
   <body>
     <div id="app">
@@ -99,7 +101,7 @@
         <div class="wrapper wrapper--small">
           <main class="product">
             <div class="product__gallery gallery">
-              <button class="button button--gallery">
+              <button class="button button--gallery" data-openModal>
                 <figure class="button__image gallery__image-container">
                   <img
                     src="./src/images/image-product-1.jpg"
@@ -224,10 +226,14 @@
           </main>
         </div>
       </div>
-      <div class="modal hidden">
-        <div class="overlay">&nbsp;</div>
-        <div class="modal__content">
-          <button class="button button--modal" aria-label="Close modal">
+      <div class="modal hidden" data-modal>
+        <div class="overlay" data-overlay>&nbsp;</div>
+        <div class="modal__content" data-modalContent>
+          <button
+            class="button button--modal"
+            aria-label="Close modal"
+            data-closeModal
+          >
             <img
               src="./src/images/icon-close.svg"
               alt=""
