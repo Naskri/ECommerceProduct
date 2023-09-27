@@ -11,20 +11,31 @@ export const handleModalFunctionality = () => {
   const openModal = () => {
     if (!modal || !modalContent) return;
     modal.classList.remove("hidden");
-    document.body.classList.add("modal");
+    document.body.classList.add("modal-open");
     focusTrap.activate();
   };
 
   const closeModal = () => {
     if (!modal) return;
     modal.classList.add("hidden");
-    document.body.classList.remove("modal");
+    document.body.classList.remove("modal-open");
     focusTrap.deactivate();
   };
 
-  openModalButton?.addEventListener("click", openModal);
+  openModalButton?.addEventListener("click", () => {
+    const windowWidth = window.innerWidth;
+    if (windowWidth <= 448) return;
+    openModal();
+  });
   closeModalButton?.addEventListener("click", closeModal);
   overlay?.addEventListener("click", closeModal);
+
+  window.addEventListener("resize", () => {
+    const windowWidth = window.innerWidth;
+    if (windowWidth <= 448) {
+      closeModal();
+    }
+  });
 
   document.body.addEventListener("keyup", (ev) => {
     const key = ev.key;

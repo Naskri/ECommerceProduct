@@ -22,7 +22,7 @@ body {
   font-family: "Kumbh Sans", sans-serif;
 }
 
-body.modal {
+body.modal-open {
   overflow: hidden;
 }
 
@@ -243,6 +243,10 @@ body.modal {
   justify-content: center;
 }
 
+.button__image {
+  pointer-events: none;
+}
+
 .button__avatar-image {
   height: 3.5rem;
   border-radius: 50%;
@@ -276,25 +280,109 @@ body.modal {
   left: 10%;
 }
 
+.button--cart {
+  width: 100%;
+}
+
 .modal .button--slider {
   display: flex;
 }
 
 .modal .button--next {
   top: 40%;
+  left: 100%;
 }
 
 .modal .button--previous {
   top: 40%;
+  left: 0;
 }
 
-.modal.hidden {
+.modal.hidden,
+.cart.hidden,
+.cart__empty.hidden {
   display: none;
 }
 
 .button--modal {
   margin-bottom: 1rem;
   align-self: flex-end;
+}
+
+/* Cart */
+
+.cart {
+  position: absolute;
+  top: 120px;
+  right: 3%;
+  background-color: var(--color-neutral);
+  max-width: 350px;
+  width: 100%;
+  padding: 1rem;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+}
+
+.cart__header {
+  padding: 1rem 0;
+  border-bottom: 3px solid var(--color-action-background);
+}
+
+.cart__title {
+  font-size: 1rem;
+}
+
+.cart__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+.cart__empty {
+  color: var(--color-text);
+}
+
+.cart__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  list-style-type: none;
+  margin-bottom: 1.5rem;
+}
+
+.cart__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.125rem;
+}
+
+.cart__item-title {
+  color: var(--color-text);
+  font-size: 0.833rem;
+  margin-bottom: 0.25rem;
+}
+
+.cart__item-summary {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.833rem;
+}
+
+.cart__item-price {
+  color: var(--color-text);
+}
+
+.cart__item-totalPrice {
+  color: var(--color-heading);
+  font-weight: 700;
+}
+
+.cart__image {
+  width: 3rem;
+  border-radius: 9px;
 }
 
 /* LINK */
@@ -365,6 +453,10 @@ body.modal {
     display: flex;
   }
 
+  .modal__content {
+    padding: 6rem;
+  }
+
   .navigation {
     padding: 1rem 0;
   }
@@ -405,7 +497,25 @@ body.modal {
   }
 }
 
+@media (max-width: 37rem) {
+  .modal__content {
+    padding: 2rem;
+  }
+}
+
 @media (max-width: 28rem) {
+  .modal {
+    display: none;
+  }
+
+  body.modal-open {
+    overflow: auto;
+  }
+
+  .button--gallery {
+    pointer-events: none;
+  }
+
   .navigation__mobile {
     flex-direction: column;
     padding: 1rem 0;
@@ -469,5 +579,11 @@ body.modal {
   .button--previous {
     top: 50%;
     left: 10%;
+  }
+
+  .cart {
+    max-width: 310px;
+    right: 50%;
+    transform: translateX(50%);
   }
 }
