@@ -51,7 +51,7 @@ export const handleSliderFunctionality = () => {
   };
 
   const setNewMainImage = (id: number) => {
-    const FOLDER_URL = "./src/assets/images";
+    const FOLDER_URL = "./../src/images";
     const newImageSource = `${FOLDER_URL}/image-product-${id}.jpg`;
 
     mainImageContainers.forEach((mainImageContainer) => {
