@@ -40,7 +40,7 @@ export const handleCartFunctionality = () => {
     const newProduct = {
       id: Math.random(),
       title: "Fall Limited Edition Sneakers",
-      image: "public/images/image-product-1-thumbnail.jpg",
+      image: "images/image-product-1-thumbnail.jpg",
       price: 125,
       amount,
     };
