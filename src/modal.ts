@@ -8,6 +8,8 @@ export const handleModalFunctionality = () => {
   const overlay = document.querySelector("[data-overlay]");
   const focusTrap = createFocusTrap(modal as HTMLElement);
 
+  const MOBILE_SIZE = 448;
+
   const openModal = () => {
     if (!modal || !modalContent) return;
     modal.classList.remove("hidden");
@@ -24,7 +26,7 @@ export const handleModalFunctionality = () => {
 
   openModalButton?.addEventListener("click", () => {
     const windowWidth = window.innerWidth;
-    if (windowWidth <= 448) return;
+    if (windowWidth <= MOBILE_SIZE) return;
     openModal();
   });
   closeModalButton?.addEventListener("click", closeModal);
@@ -32,7 +34,7 @@ export const handleModalFunctionality = () => {
 
   window.addEventListener("resize", () => {
     const windowWidth = window.innerWidth;
-    if (windowWidth <= 448) {
+    if (windowWidth <= MOBILE_SIZE) {
       closeModal();
     }
   });

@@ -37,11 +37,14 @@ body.modal-open {
 }
 
 .navigation {
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   border-bottom: 3px solid var(--color-action-background);
+}
+
+.navigation--mobile {
+  display: none;
 }
 
 .navigation__routing {
@@ -69,24 +72,11 @@ body.modal-open {
   gap: 2rem;
 }
 
-.navigation--mobile {
-  display: none;
-}
-
 .product {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 3rem;
   padding: 6rem 0;
-}
-
-.gallery__image-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 16px;
-  overflow: hidden;
-  pointer-events: none;
 }
 
 .gallery {
@@ -97,8 +87,25 @@ body.modal-open {
   gap: 1.5rem;
 }
 
-.gallery__image-container:hover .gallery__image {
-  opacity: 0.7;
+.gallery__image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  overflow: hidden;
+  pointer-events: none;
+  transition: 0.3s;
+  border: 2px solid var(--color-neutral);
+}
+
+.button--gallery:hover .gallery__image-container,
+.button--gallery.active .gallery__image-container {
+  border-color: var(--color-primary);
+}
+
+.button--gallery:hover .gallery__image {
+  opacity: 0.95;
+  transform: scale(1.03);
 }
 
 .gallery__image {
@@ -118,12 +125,12 @@ body.modal-open {
 }
 
 .content__subtitle {
-  text-transform: uppercase;
-  color: var(--color-primary);
-  font-weight: 600;
+  margin-bottom: 1.5rem;
   font-size: 0.833rem;
   letter-spacing: 2px;
-  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--color-primary);
 }
 
 .content__title {
@@ -198,13 +205,6 @@ body.modal-open {
 
 .button--gallery {
   border-radius: 16px;
-  transition: 0.3s;
-  border: 1px solid var(--color-neutral);
-}
-
-.button--gallery.active,
-.button--gallery:hover {
-  border-color: var(--color-primary);
 }
 
 .button--hamburger {
@@ -309,8 +309,6 @@ body.modal-open {
   align-self: flex-end;
 }
 
-/* Cart */
-
 .cart {
   position: absolute;
   top: 120px;
@@ -385,8 +383,6 @@ body.modal-open {
   border-radius: 9px;
 }
 
-/* LINK */
-
 .link:link,
 .link:visited {
   display: inline-block;
@@ -419,8 +415,6 @@ body.modal-open {
   transition: transform 0.3s;
 }
 
-/* MODAL */
-
 .modal {
   display: flex;
   align-items: center;
@@ -442,6 +436,8 @@ body.modal-open {
 }
 
 .modal__content {
+  position: relative;
+  z-index: 9999;
   display: flex;
   flex-direction: column;
   padding: 12rem;
