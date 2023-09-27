@@ -101,7 +101,11 @@
         <div class="wrapper wrapper--small">
           <main class="product">
             <div class="product__gallery gallery">
-              <button class="button button--gallery" data-openModal>
+              <button
+                class="button button--gallery"
+                data-openModal
+                data-mainImageContainer
+              >
                 <figure class="button__image gallery__image-container">
                   <img
                     src="./src/images/image-product-1.jpg"
@@ -111,7 +115,7 @@
                 </figure>
               </button>
               <div class="gallery__images">
-                <button class="button button--gallery">
+                <button class="button button--gallery" data-buttonImages="1">
                   <figure class="gallery__image-container">
                     <img
                       src="./src/images/image-product-1-thumbnail.jpg"
@@ -120,7 +124,7 @@
                     />
                   </figure>
                 </button>
-                <button class="button button--gallery">
+                <button class="button button--gallery" data-buttonImages="2">
                   <figure class="gallery__image-container">
                     <img
                       src="./src/images/image-product-2-thumbnail.jpg"
@@ -129,7 +133,7 @@
                     />
                   </figure>
                 </button>
-                <button class="button button--gallery">
+                <button class="button button--gallery" data-buttonImages="3">
                   <figure class="gallery__image-container">
                     <img
                       src="./src/images/image-product-3-thumbnail.jpg"
@@ -138,7 +142,7 @@
                     />
                   </figure>
                 </button>
-                <button class="button button--gallery">
+                <button class="button button--gallery" data-buttonImages="4">
                   <figure class="gallery__image-container">
                     <img
                       src="./src/images/image-product-4-thumbnail.jpg"
@@ -151,6 +155,7 @@
               <button
                 class="button button--slider button--previous"
                 aria-label="Previous image"
+                data-previousSlide
               >
                 <img
                   src="./src/images/icon-previous.svg"
@@ -161,6 +166,7 @@
               <button
                 class="button button--slider button--next"
                 aria-label="Next image"
+                data-nextSlide
               >
                 <img
                   src="./src/images/icon-next.svg"
@@ -241,7 +247,10 @@
             />
           </button>
           <div class="product__gallery gallery">
-            <figure class="button__image gallery__image-container">
+            <figure
+              class="button__image gallery__image-container"
+              data-mainImageContainer
+            >
               <img
                 src="./src/images/image-product-1.jpg"
                 alt="Fall Limited Edition Sneakers"
@@ -249,7 +258,7 @@
               />
             </figure>
             <div class="gallery__images">
-              <button class="button button--gallery">
+              <button class="button button--gallery" data-buttonImages="1">
                 <figure class="gallery__image-container">
                   <img
                     src="./src/images/image-product-1-thumbnail.jpg"
@@ -258,7 +267,7 @@
                   />
                 </figure>
               </button>
-              <button class="button button--gallery">
+              <button class="button button--gallery" data-buttonImages="2">
                 <figure class="gallery__image-container">
                   <img
                     src="./src/images/image-product-2-thumbnail.jpg"
@@ -267,7 +276,7 @@
                   />
                 </figure>
               </button>
-              <button class="button button--gallery">
+              <button class="button button--gallery" data-buttonImages="3">
                 <figure class="gallery__image-container">
                   <img
                     src="./src/images/image-product-3-thumbnail.jpg"
@@ -276,7 +285,7 @@
                   />
                 </figure>
               </button>
-              <button class="button button--gallery">
+              <button class="button button--gallery" data-buttonImages="4">
                 <figure class="gallery__image-container">
                   <img
                     src="./src/images/image-product-4-thumbnail.jpg"
@@ -289,6 +298,7 @@
             <button
               class="button button--slider button--previous"
               aria-label="Previous image"
+              data-previousSlide=""
             >
               <img
                 src="./src/images/icon-previous.svg"
@@ -299,6 +309,7 @@
             <button
               class="button button--slider button--next"
               aria-label="Next image"
+              data-nextSlide=""
             >
               <img
                 src="./src/images/icon-next.svg"

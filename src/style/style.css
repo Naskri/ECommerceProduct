@@ -86,6 +86,7 @@ body.modal {
   justify-content: center;
   border-radius: 16px;
   overflow: hidden;
+  pointer-events: none;
 }
 
 .gallery {
@@ -201,6 +202,7 @@ body.modal {
   border: 1px solid var(--color-neutral);
 }
 
+.button--gallery.active,
 .button--gallery:hover {
   border-color: var(--color-primary);
 }
